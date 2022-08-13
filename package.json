@@ -1,11 +1,27 @@
 {
-  "name": "begin-app",
+  "name": "browser-vm",
   "version": "0.0.0",
-  "description": "A simple Begin app with the minimum necessary file structure",
+  "description": "browsing-context virtual machine",
+  "main": "src/browser-vm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serapath/browser-vm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serapath/browser-vm/issues"
+  },
+  "homepage": "http://browser-vm.github.io",
+  "author": {
+    "name": "serapath",
+    "email": "dev@serapath.de",
+    "url": "http://www.github.com/serapath"
+  },
   "scripts": {
-    "start": "npx sandbox"
+    "start": "budo demo/demo.js:bundle.js --open --live",
+    "build": "browserify demo/demo.js -o bundle.js"
   },
   "devDependencies": {
-    "@architect/sandbox": "^1.4.16"
+    "browserify": "^17.0.0",
+    "budo": "^11.7.0"
   }
 }
